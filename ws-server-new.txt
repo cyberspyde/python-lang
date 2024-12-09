@@ -1,0 +1,14 @@
+In this code:
+
+We import the necessary modules: asyncio for asynchronous programming and websockets for WebSocket communication.
+We define a set connected_clients to keep track of all currently connected clients.
+The handle_client function manages each client connection. It adds the client to the connected_clients set, listens for incoming messages, and broadcasts received messages to all other clients.
+The main function creates a WebSocket server that listens on localhost at port 12345 and waits for client connections.
+We run the server using asyncio.run(main()).
+
+
+In this code:
+
+We define the chat function that connects to the WebSocket server at ws://localhost:12345.
+Inside the chat function, we enter an infinite loop where we prompt the user for a message, send it to the server, and print any response received from the server.
+We run the client using asyncio.run(chat()).
