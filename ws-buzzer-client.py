@@ -6,7 +6,7 @@ async def start_client():
     async with websockets.connect("ws://localhost:5555") as websocket:
         done = False
         while not done:
-            if keyboard.is_pressed("space"):
+            if keyboard.is_pressed("shift"):
                 await websocket.send("buzz")
                 message = await websocket.recv()
                 print(message)
